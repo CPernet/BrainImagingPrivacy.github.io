@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.description }}">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#142e36">
+  <title>{% if slug != 'index' %}{{ page.title }} · {% endif %}Brain Imaging Privacy</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+ <div class="container header-inner">
+  <a class="brand" href="index.html" aria-label="Brain Imaging Privacy home">
+   <svg class="brand-symbol" viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="15" height="15" rx="5"/><rect x="23" y="2" width="15" height="15" rx="5"/><rect x="2" y="23" width="15" height="15" rx="5"/><path d="M23 23h15v10a5 5 0 0 1-5 5H23z" fill="currentColor" opacity=".45"/></svg>
+   <span>Brain Imaging<br><strong>Privacy</strong></span>
+  </a>
+  <nav aria-label="Main navigation">
+   {% for id, label in [('researchers', 'Researchers'), ('participants', 'Participants'), ('legal', 'DPOs & lawyers'), ('policy', 'Policymakers')] %}
+   <a href="{{ id }}.html" {% if slug == id %}aria-current="page"{% endif %}>{{ label }}</a>
+   {% endfor %}
+  </nav>
+  <a class="header-github" href="{{ repo }}">GitHub <span aria-hidden="true">↗</span></a>
+ </div>
+</header>
+{% block main %}{% endblock %}
+<footer class="footer">
+ <div class="container footer-inner">
+  <div><strong>Brain Imaging Privacy</strong><p>A shared resource, built around evidence.</p></div>
+  <div class="footer-links"><a href="index.html#about">About the initiative</a><a href="{{ repo }}/blob/main/CONTRIBUTING.md">Contribute</a><a href="{{ repo }}">Source on GitHub ↗</a></div>
+ </div>
+ <div class="container footer-note">Website in development. Audience guidance is an initial draft awaiting expert review.</div>
+</footer>
+</body>
+</html>
