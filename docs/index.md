@@ -28,17 +28,17 @@ action = "Explore policy perspectives"
 +++
 ## Evidence behind the guidance {#evidence}
 
-Scientific papers, reproducible analyses and practical tools provide the foundations for this resource. Published evidence and expert judgements will be distinguished throughout.
+Scientific papers, reproducible analyses and practical tools provide the foundations for this resource. The audience pages explain how imaging properties, demographic combinations and access arrangements contribute to privacy assessments, distinguishing published evidence from ongoing expert-consensus work.
 
 ### Metadata privacy in neuroimaging
 
-**Published paper · linked analysis.** *Assessing metadata privacy in neuroimaging* examines privacy in metadata accompanying OpenNeuro datasets using metaprivBIDS.
+**Published paper · linked analysis.** *Assessing metadata privacy in neuroimaging* examines participant metadata from selected OpenNeuro datasets using metaprivBIDS. Demographic combinations deserved particular attention; clinical information could remain sensitive even when it contributed little to identification. The study assessed potential vulnerabilities without attempting to identify participants.
 
 [Read the paper](https://doi.org/10.1162/IMAG.a.1144) · [Explore the analyses](https://github.com/CPernet/OpenNeuro_MetaPrivAssessment) · [Get metaprivBIDS](https://github.com/CPernet/metaprivBIDS)
 
 ### Expert ratings of identification likelihood
 
-**Work in progress · analysis hosted here.** This project collects expert ratings of re-identification and singling-out likelihood across neuroimaging data types. The notebook and survey data are available for inspection; ratings are not yet presented here as final recommendations.
+**Work in progress · analysis hosted here.** This project examines identification-related properties across imaging modalities and processing levels. A central distinction is between matching individual-specific brain patterns and connecting data to a real-world identity. The working manuscript informs the audience summaries, but provisional numerical ratings are not presented here as final recommendations.
 
 [Explore the ratings project](https://github.com/CPernet/BrainImagingPrivacy.github.io/tree/main/papers/expert-ratings)
 
@@ -48,4 +48,4 @@ Brain Imaging Privacy brings together evidence and expert perspectives on the re
 
 The website is being developed alongside an expert-consensus paper. It is designed for community maintenance: contributors can propose evidence and corrections through GitHub, with review before changes to guidance. Cyril Pernet coordinates the initial development; additional maintainers and reviewers can join through the contribution process.
 
-**Current status:** the website structure is in place. Audience pages are initial drafts awaiting expert review. Contributor names, review dates and changes to recommendations will be documented as the resource develops.
+**Current status:** the audience pages now contain source-linked summaries of the published metadata study and the working consensus manuscript, adapted for each readership. The summaries await expert review. Content-update dates are shown separately from any future approval or review dates.

@@ -772,3 +772,11 @@ h3 {
     break-inside:avoid;
   }
 }
+
+/* Keep source and content dates subordinate to the page introduction. */
+.page-heading > p.content-date {
+  font-size: 12px;
+  margin-top: 12px;
+  margin-bottom: 0;
+  color: var(--muted);
+}
