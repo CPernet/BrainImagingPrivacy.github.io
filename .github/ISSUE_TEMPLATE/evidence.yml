@@ -1,0 +1,32 @@
+name: Submit evidence
+description: Suggest evidence relevant to brain imaging privacy.
+title: "[Evidence] "
+body:
+  - type: markdown
+    attributes:
+      value: "Contributions are reviewed before guidance changes. Do not include confidential or restricted participant data."
+  - type: input
+    id: scope
+    attributes:
+      label: Relevant page or data type
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source / DOI / URL
+    validations:
+      required: true
+  - type: textarea
+    id: finding
+    attributes:
+      label: Finding and study conditions
+      description: Describe the data, population, methods, access assumptions and limitations.
+    validations:
+      required: true
+  - type: textarea
+    id: implication
+    attributes:
+      label: Proposed implication for the guidance
+    validations:
+      required: true

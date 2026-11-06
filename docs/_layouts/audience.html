@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block main %}
+<main id="main" class="container">
+ <div class="breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>{{ page.nav_label }}</span></div>
+ <header class="page-heading"><p class="eyebrow">{{ page.kicker }}</p><h1>{{ page.title }}</h1><p>{{ page.description }}</p><span class="draft-label">Draft summary · Expert review pending</span><p class="content-date">Content updated {{ page.updated }}</p></header>
+ <div class="article-layout">
+  <aside class="article-sidebar"><nav aria-label="On this page"><p class="eyebrow">On this page</p>{{ toc }}</nav><div class="sidebar-contribute"><p>Help improve this page</p><a href="{{ edit_url }}">Edit on GitHub ↗</a><a href="{{ repo }}/issues/new?template=evidence.yml">Submit evidence ↗</a></div></aside>
+  <article class="prose">{{ content }}<div class="article-end"><strong>Evidence and interpretation</strong><p>Published findings, the working consensus manuscript and editorial implications are identified separately. These audience summaries await expert review; final consensus ratings are not reproduced here.</p></div></article>
+ </div>
+ <nav class="other-audiences" aria-label="Other audiences"><span>Explore another perspective</span>{% for id, label in [('researchers', 'Researchers'), ('participants', 'Participants'), ('legal', 'DPOs & lawyers'), ('policy', 'Policymakers')] %}{% if id != slug %}<a href="{{ id }}.html">{{ label }} →</a>{% endif %}{% endfor %}</nav>
+</main>
+{% endblock %}
