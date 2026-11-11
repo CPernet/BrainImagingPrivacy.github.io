@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block main %}
+<main id="main">
+ <section class="hero container">
+  <div class="hero-main">
+   <p class="eyebrow"><span class="status-dot"></span> Science · Privacy · Responsible sharing</p>
+   <h1>Understanding privacy<br>in <em>brain imaging.</em></h1>
+   <p class="hero-description">{{ page.description }}</p>
+   <a class="text-link" href="#audiences">Find information for you <span aria-hidden="true">↓</span></a>
+  </div>
+  <aside class="hero-aside" aria-label="Our scope">
+   <span class="aside-label">From data to decisions</span>
+   <p>What can data reveal?<br>How can risks be assessed?<br>Which safeguards help?</p>
+   <div class="scope-tags"><span>MRI & CT</span><span>PET</span><span>EEG & MEG</span><span>Metadata & derivatives</span></div>
+  </aside>
+ </section>
+ <section id="audiences" class="audience-section container" aria-labelledby="audiences-title">
+  <div class="section-heading"><div><p class="eyebrow">Four perspectives. One evidence base.</p><h2 id="audiences-title">Find your starting point</h2></div><p>Information shaped around the<br>questions you need to answer.</p></div>
+  <div class="audience-grid">
+  {% for card in page.audiences %}
+   <a class="audience-card {{ card.id }}" href="{{ card.id }}.html">
+    <div class="card-top"><span class="card-number">0{{ loop.index }}</span><span class="card-category">{{ card.category }}</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+    <h3>{{ card.title }}</h3><p>{{ card.description }}</p><span class="card-action">{{ card.action }} <span aria-hidden="true">→</span></span>
+   </a>
+  {% endfor %}
+  </div>
+ </section>
+ <section class="home-content container">{{ content }}</section>
+ <section id="contribute" class="contribution-band">
+  <div class="container contribution-inner"><div><p class="eyebrow">A resource that can evolve</p><h2>New evidence belongs in the conversation.</h2><p>Suggest a study, flag a correction or help improve an explanation.<br>Contributions are reviewed before guidance is revised.</p></div><a class="button" href="{{ repo }}/issues/new?template=evidence.yml">Submit evidence <span aria-hidden="true">↗</span></a></div>
+ </section>
+</main>
+{% endblock %}
